@@ -11,6 +11,7 @@ using DevExpress.Xpo;
 using DevExpress.ExpressApp.Xpo;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.BaseImpl.PermissionPolicy;
+using SecuritySetState.Module.BusinessObjects;
 
 namespace SecuritySetState.Module.DatabaseUpdate {
     // For more typical usage scenarios, be sure to check out https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Updating.ModuleUpdater
@@ -20,6 +21,21 @@ namespace SecuritySetState.Module.DatabaseUpdate {
         }
         public override void UpdateDatabaseAfterUpdateSchema() {
             base.UpdateDatabaseAfterUpdateSchema();
+            var cnt = ObjectSpace.GetObjects<Contact>().Count;
+            if(cnt > 0) {
+                return;
+            }
+            for(int i = 0; i < 2; i++) {
+                string contactName = "FirstName" + i;
+                var contact = CreateObject<Contact>("FirstName", contactName);
+                contact.LastName = "LastName" + i;
+                contact.Age = i * 10;
+                for(int j = 0; j < 2; j++) {
+                    string taskName = "Subject" + i + " - " + j;
+                    var task = CreateObject<MyTask>("Subject", taskName);
+                    task.AssignedTo = contact;
+                }
+            }
             //string name = "MyName";
             //DomainObject1 theObject = ObjectSpace.FindObject<DomainObject1>(CriteriaOperator.Parse("Name=?", name));
             //if(theObject == null) {
@@ -51,6 +67,17 @@ namespace SecuritySetState.Module.DatabaseUpdate {
             adminRole.IsAdministrative = true;
 			userAdmin.Roles.Add(adminRole);
             ObjectSpace.CommitChanges(); //This line persists created object(s).
+        }
+        T CreateObject<T>(string propertyName, string value) {
+
+            T theObject = ObjectSpace.FindObject<T>(new OperandProperty(propertyName) == value);
+            if(theObject == null) {
+                theObject = ObjectSpace.CreateObject<T>();
+                ((BaseObject)(Object)theObject).SetMemberValue(propertyName, value);
+            }
+
+            return theObject;
+
         }
         public override void UpdateDatabaseBeforeUpdateSchema() {
             base.UpdateDatabaseBeforeUpdateSchema();
