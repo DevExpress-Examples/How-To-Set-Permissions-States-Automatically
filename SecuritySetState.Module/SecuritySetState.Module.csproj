@@ -94,6 +94,9 @@
   <ItemGroup>
     <Compile Include="BusinessObjects\Contact.cs" />
     <Compile Include="BusinessObjects\MyTask.cs" />
+    <Compile Include="Controllers\SetStateController.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DatabaseUpdate\Updater.cs" />
     <Compile Include="Module.cs">
       <SubType>Component</SubType>
