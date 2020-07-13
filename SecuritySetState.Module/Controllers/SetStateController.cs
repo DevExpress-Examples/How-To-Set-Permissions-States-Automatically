@@ -29,12 +29,12 @@ namespace SecuritySetState.Module.Controllers {
                 typePermission.DeleteState = defaultState;
             }
             PermissionPolicyNavigationPermissionObject navigationPermission = e.CreatedObject as PermissionPolicyNavigationPermissionObject;
-            if(navigationPermisson != null) {
+            if(navigationPermission != null) {
                 SecurityPermissionState defaultState = SecurityPermissionState.Allow;
-                if(navigationPermisson.Role.PermissionPolicy == SecurityPermissionPolicy.AllowAllByDefault) {
+                if(navigationPermission.Role.PermissionPolicy == SecurityPermissionPolicy.AllowAllByDefault) {
                     defaultState = SecurityPermissionState.Deny;
                 }
-                navigationPermisson.NavigateState = defaultState;
+                navigationPermission.NavigateState = defaultState;
             }
         }
         protected override void OnDeactivated() {
