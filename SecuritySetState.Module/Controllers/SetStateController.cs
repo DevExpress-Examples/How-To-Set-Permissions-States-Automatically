@@ -28,7 +28,7 @@ namespace SecuritySetState.Module.Controllers {
                 typePermission.CreateState = defaultState;
                 typePermission.DeleteState = defaultState;
             }
-            PermissionPolicyNavigationPermissionObject navigationPermisson = e.CreatedObject as PermissionPolicyNavigationPermissionObject;
+            PermissionPolicyNavigationPermissionObject navigationPermission = e.CreatedObject as PermissionPolicyNavigationPermissionObject;
             if(navigationPermisson != null) {
                 SecurityPermissionState defaultState = SecurityPermissionState.Allow;
                 if(navigationPermisson.Role.PermissionPolicy == SecurityPermissionPolicy.AllowAllByDefault) {
