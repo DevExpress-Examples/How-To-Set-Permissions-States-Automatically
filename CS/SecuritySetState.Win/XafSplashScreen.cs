@@ -49,8 +49,5 @@ namespace SecuritySetState.Win {
         }
         
         #endregion
-
-        public enum SplashScreenCommand {
-        }
     }
 }
