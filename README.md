@@ -1,5 +1,16 @@
+<!-- default badges list -->
+[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
+[![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
+<!-- default badges end -->
 # CriteriaOperatorsCheatSheet
 
 This example is unavailable in the v25.2+ since we officially ended XAF WebForms & WinForms .NET Framework support in our v25.2+ release cycle. We also removed all XAF .NET Framework and legacy .NET modules/APIs, and older/deprecated Security System implementations from our source code. 
 
 For additional information, refer to the following article: [XAF - Legacy .NET Framework (WinForms and ASP.NET WebForms) APIs, .NET-based API/Modules, and Security System have been removed from distribution](https://supportcenter.devexpress.com/ticket/details/t1312589/xaf-legacy-net-framework-winforms-and-asp-net-webforms-apis-net-based-api-modules-and)
+<!-- feedback -->
+## Does this example address your development requirements/objectives?
+
+[<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=How-To-Set-Permissions-States-Automatically&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=How-To-Set-Permissions-States-Automatically&~~~was_helpful=no)
+
+(you will be redirected to DevExpress.com to submit your response)
+<!-- feedback end -->
