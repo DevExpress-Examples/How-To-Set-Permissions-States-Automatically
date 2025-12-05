@@ -1,1 +1,1 @@
-﻿<%@ Application Language="C#" CodeBehind="Global.asax.cs" Inherits="SecuritySetState.Web.Global"%>
+<%@ Application Language="VB" CodeBehind="Global.asax.vb" Inherits="SecuritySetState.Web.Global"%>
