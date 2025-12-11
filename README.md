@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 [![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
-# CriteriaOperatorsCheatSheet
+# How To Set Permissions States Automatically
 
 This example is unavailable in v25.2+ since we ended XAF WebForms & WinForms .NET Framework support in our v25.2+ release cycle. We also removed all XAF .NET Framework and legacy .NET modules/APIs, and older/deprecated Security System implementations from our source code. 
 
@@ -16,3 +16,4 @@ For more information, refer to the following article: [XAF - Legacy .NET Framewo
 
 (you will be redirected to DevExpress.com to submit your response)
 <!-- feedback end -->
+
